@@ -1,12 +1,7 @@
-# utils.py
+# utils.py 
 import streamlit as st
 import streamlit.components.v1 as components
 import os
-
-def load_css():
-    css_path = os.path.join(os.path.dirname(__file__), "style.css")
-    with open(css_path, encoding="utf-8") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 def get_filtered_products(products, search_query, category_filter, min_price, max_price):
     filtered_products = [
